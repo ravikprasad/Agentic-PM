@@ -8,13 +8,15 @@ As a practitioner of AI, I'm intrigued enough (using GitHub Copilot, Microsoft C
 
 **Total Slides:** 14
 
-## About This Presentation
+## About This Talk Series
 
-This presentation revolves around four key aspects. It starts from AI fundamentals to Agentic AI and areas it is impacting project management.  
+Session around this topic revolves around four key aspects. It starts from AI fundamentals to Agentic AI and areas it is impacting project management.  
 (1) AI fundamentals refresher,
 (2) What is agentic AI? Difference between "AI Agent" and "Agentic AI",
 (3) Societal & Industry impact of "Agentic AI", and
 (4) ways it has started impacting project management and other industries & industry functions.
+
+In addition to above four key areas, on-deman demo session could be planned to create agents using GitHub Copilot or Microsoft Copilot. I've also been exploring https://n8n.io/ Agentic AI product. Disclaimer: This talk series are my own agentic AI explorations, not an endorsement of any particular product or services.
 
 
 ## Quick Start
