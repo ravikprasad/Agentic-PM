@@ -209,13 +209,13 @@ Here is an overview of the project files:
 ├── slide7.html            # Slide 7: Generative AI vs Agentic AI
 ├── slide8.html            # Slide 8: AI Agent vs Agentic AI
 ├── slide9.html            # Slide 9: What is an AI Agent?
-├── slide10.html           # Slide 10:Agentic AI Capabilities
-├── slide11.html           # Slide 11:AgentVerse
-├── slide12.html           # Slide 12:Agentic AI: Use Cases
-├── slide13.html           # Slide 13:Key Impacts of Agentic AI
-├── slide14.html           # Slide 14:Demo 
-├── slide15.html           # Slide 14:So, what's next? 
-├── slide16.html           # Slide 14:Thank you!
+├── slide10.html           # Slide 10: Key Impacts of Agentic AI
+├── slide11.html           # Slide 11: AgentVerse
+├── slide12.html           # Slide 12: Agentic AI: Use Cases
+├── slide13.html           # Slide 13: AgentVerse: A MultiAgent Simulation
+├── slide14.html           # Slide 14: Demo 
+├── slide15.html           # Slide 15: So, what's next? 
+├── slide16.html           # Slide 16: Thank you!
 ├── slide-template.html    # Template for creating new slides
 ├── config.js              # Presentation configuration
 ├── navbar.js              # Navigation bar component
