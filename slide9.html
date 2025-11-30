@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Agentic PM - Slide 9</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="styles.css?v=1.1">
+    <script src="config.js"></script>
+    <script src="navbar.js"></script>
+</head>
+<body>
+    
+    <div class="slide active">
+        
+        <div class="slide-content">
+            <!-- ========================================
+                 CONTENT AREA - Replace this section
+                 ======================================== -->
+            
+            <h1>So, what is an AI Agent?</h1>
+            
+            <div class="content-section text-center">
+                <p class="h3" style="margin-top: 2rem; margin-bottom: 2rem;">
+                    <span class="h1" style="color: var(--bs-primary);"><i class="bi bi-robot me-2"></i>Agent</span>
+                    <span style="font-size: 2.5rem; vertical-align: middle;"> = </span>
+                    <span style="color: #dc3545;">LLM</span>
+                    <span style="color: #6c757d;">+</span>
+                    <span style="color: #fd7e14;">Planner</span>
+                    <span style="color: #6c757d;">+</span>
+                    <span style="color: #20c997;">Memory</span>
+                    <span style="color: #6c757d;">+</span>
+                    <span style="color: #0dcaf0;">Tools/Skills</span>
+                    <span style="color: #6c757d;">+</span>
+                    <span style="color: #d63384;">State/Action</span>
+                    <span style="color: #6c757d;">+</span>
+                    <span style="color: #ffc107;">Share/Communicate</span>
+                </p>
+
+                <div style="position: absolute; bottom: 80px; width: 100%; left: 0;">
+                    <a href="https://github.com/OpenBMB/AgentVerse/" target="_blank" class="h5">AgentVerse</a>
+                </div>
+            </div>
+            
+            <!-- ======================================== -->
+        </div>
+        
+        <div class="nav-controls">
+            <button class="btn btn-custom" id="prev-btn">
+                <i class="bi bi-arrow-left"></i> Previous
+            </button>
+            <span class="slide-indicator">... / ...</span>
+            <button class="btn btn-custom" id="next-btn">
+                Next <i class="bi bi-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="navigation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Update page title from config
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.presentationConfig) {
+                const slideNumber = document.querySelector('.slide-indicator').textContent.split('/')[0].trim();
+                document.getElementById('page-title').textContent = 
+                    `${window.presentationConfig.event.name} - Slide ${slideNumber}`;
+            }
+        });
+    </script>
+</body>
+</html>

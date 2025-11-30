@@ -49,7 +49,7 @@ Agentic PM/
 ├── navigation.js          # Slide navigation logic
 ├── styles.css             # All styling
 ├── images/                # Place your images here
-└── README.md             # This file
+└── README.md              # This file
 ```
 
 ## Configuration
@@ -79,13 +79,6 @@ const presentationConfig = {
 2. Replace placeholder content in the slide-content section
 3. Update `[SLIDE_NUMBER]` and `[TOTAL_SLIDES]` in the slide indicator
 4. Update `totalSlides` in `config.js`
-
-### Example Content Components
-
-**Simple Title:**
-```html
-<h1>Your Title</h1>
-<h3 cl
 
 ### Example Content Components
 
@@ -200,3 +193,34 @@ Modern browsers recommended:
 ---
 
 **Ready to present!** Just edit `config.js` and start customizing your slides.
+
+# Presentation File Structure
+
+Here is an overview of the project files:
+
+```
+├── index.html              # Welcome/landing page
+├── slide1.html            # Slide 1: Why Agentic AI matters?
+├── slide2.html            # Slide 2: Agentic AI by 2030
+├── slide3.html            # Slide 3: AI Fundamentals
+├── slide4.html            # Slide 4: Brief History of AI
+├── slide5.html            # Slide 5: Responsible AI
+├── slide6.html            # Slide 6: AI by Industry & Function
+├── slide7.html            # Slide 7: Generative AI vs Agentic AI
+├── slide8.html            # Slide 8: AI Agent vs Agentic AI
+├── slide9.html            # Slide 9: What is an AI Agent?
+├── slide10.html           # Slide 10:Agentic AI Capabilities
+├── slide11.html           # Slide 11:AgentVerse
+├── slide12.html           # Slide 12:Agentic AI: Use Cases
+├── slide13.html           # Slide 13:Key Impacts of Agentic AI
+├── slide14.html           # Slide 14:Demo 
+├── slide15.html           # Slide 14:So, what's next? 
+├── slide16.html           # Slide 14:Thank you!
+├── slide-template.html    # Template for creating new slides
+├── config.js              # Presentation configuration
+├── navbar.js              # Navigation bar component
+├── navigation.js          # Slide navigation logic
+├── styles.css             # All styling
+├── images/                # Place your images here
+└── README.md              # This file
+```

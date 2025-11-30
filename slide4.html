@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Agentic PM - Slide 4</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="styles.css?v=1.1">
+    <script src="config.js"></script>
+    <script src="navbar.js"></script>
+</head>
+<body>
+    
+    <div class="slide active">
+        
+        <div class="slide-content">
+            <!-- ========================================
+                 CONTENT AREA - Replace this section
+                 ======================================== -->
+            
+            <h1 style="margin-bottom: 1rem;">Brief History of AI </h1>
+            <h3 class="subtitle" style="margin-bottom: 1.5rem; color: var(--text-secondary); font-size: 1.1rem;">Let's understand history of AI and changes in the last 10 years</h3>
+            
+            <div class="content-section">
+                <!-- Image Container -->
+                <div class="slide-image-container">
+                    <img src="images/ai-brief-history.png" 
+                         alt="Timeline of AI History" 
+                         class="slide-image">
+                </div>
+            </div>
+            <!-- Key Insights -->
+            <div class="theme-cards">
+                <div class="theme-card">
+                    <h3><i class="bi bi-clock-history"></i> Foundation Era (1943-1950)</h3>
+                    <p>Birth of artificial neurons and the Turing Test laid the groundwork for modern AI</p>
+                </div>
+                
+                <div class="theme-card">
+                    <h3><i class="bi bi-lightning-charge"></i> Breakthrough Period (2014-2025)</h3>
+                    <p>Rapid evolution from DeepFace to Transformers, GPT, DALL-E, and now Agentic AI systems</p>
+                </div>
+            </div>
+            <!-- ======================================== -->
+        </div>
+        
+        <div class="nav-controls">
+            <button class="btn btn-custom" id="prev-btn">
+                <i class="bi bi-arrow-left"></i> Previous
+            </button>
+            <span class="slide-indicator">... / ...</span>
+            <button class="btn btn-custom" id="next-btn">
+                Next <i class="bi bi-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="navigation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Update page title from config
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.presentationConfig) {
+                const slideNumber = document.querySelector('.slide-indicator').textContent.split('/')[0].trim();
+                document.getElementById('page-title').textContent = 
+                    `${window.presentationConfig.event.name} - Slide ${slideNumber}`;
+            }
+        });
+    </script>
+</body>
+</html>
