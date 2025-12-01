@@ -29,3 +29,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+// Add footer to each slide
+document.addEventListener('DOMContentLoaded', () => {
+    // Inject footer into all slides
+    const slides = document.querySelectorAll('.slide');
+    slides.forEach(slide => {
+        if (!slide.querySelector('.footer-credit')) {
+            const footer = document.createElement('div');
+            footer.className = 'footer-credit';
+            footer.innerHTML = `<a href="https://github.com/ravikprasad" target="_blank">@ravikprasad</a>`;
+            slide.appendChild(footer);
+        }
+    });
+});

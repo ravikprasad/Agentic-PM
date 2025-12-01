@@ -10,7 +10,7 @@ const presentationConfig = {
     event: {
         name: "How Agentic AI is Redefining the Future of Project Management",
         date: "Dec 02, 2025",
-        totalSlides: 16
+        totalSlides: 17
     },
     // Hidden slides configuration
     // Add slide numbers to this array to hide them from navigation
