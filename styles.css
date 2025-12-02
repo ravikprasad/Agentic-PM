@@ -428,3 +428,86 @@ h2 {
     z-index: 50;
     pointer-events: none;
 }
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes swing {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(15deg);
+    }
+    75% {
+        transform: rotate(-15deg);
+    }
+}
+
+@keyframes beep {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.05);
+    }
+}
+
+@keyframes signal {
+    0% {
+        transform: translateY(0) scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-60px) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.robot-container {
+    position: relative;
+    display: inline-block;
+}
+
+.beeping-icon {
+    display: inline-block;
+    animation: beep 1.5s ease-in-out infinite;
+}
+
+.signal-wave {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    animation: signal 2s ease-out infinite;
+}
+
+.signal-wave-1 {
+    animation-delay: 0s;
+}
+
+.signal-wave-2 {
+    animation-delay: 0.6s;
+}
+
+.signal-wave-3 {
+    animation-delay: 1.2s;
+}
+
+.rotating-icon {
+    display: inline-block;
+    animation: swing 2s ease-in-out infinite;
+    transform-origin: top center;
+}
