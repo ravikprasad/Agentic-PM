@@ -10,6 +10,7 @@ As a practitioner of AI, I'm intrigued enough (using GitHub Copilot, Microsoft C
 
 ## 📚 Documentation
 
+- **[EPIC_ANALYSIS_SUMMARY.md](EPIC_ANALYSIS_SUMMARY.md)** - Executive summary of the application analysis
 - **[EPICS.md](EPICS.md)** - Detailed documentation of all developed epics and features
 - **[ROADMAP.md](ROADMAP.md)** - Future enhancements and potential new epics to improve the application
 
