@@ -47,6 +47,12 @@
     <script>
         // Update content from config
         document.addEventListener('DOMContentLoaded', () => {
+            // Set current date
+            const now = new Date();
+            const options = { month: 'long', day: 'numeric', year: 'numeric' };
+            const currentDate = now.toLocaleDateString('en-US', options);
+            document.getElementById('event-date').textContent = currentDate;
+            
             if (window.presentationConfig) {
                 const config = window.presentationConfig;
                 
@@ -54,7 +60,6 @@
                 document.getElementById('page-title').textContent = `${config.event.name} - Welcome`;
                 
                 // Update event info
-                if (config.event.date) document.getElementById('event-date').textContent = config.event.date;
                 if (config.event.name) document.getElementById('event-title').textContent = config.event.name;
                 
                 // Update presenter info
