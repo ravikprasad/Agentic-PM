@@ -6,7 +6,12 @@ As a practitioner of AI, I'm intrigued enough (using GitHub Copilot, Microsoft C
 
 **Presenter:** Ravi Kaushal Prasad, Sr. Technical Project Manager, GitHub | Directory of Academic Initiatives, Puget Sound PMI
 
-**Total Slides:** 14
+**Total Slides:** 17
+
+## 📚 Documentation
+
+- **[EPICS.md](EPICS.md)** - Detailed documentation of all developed epics and features
+- **[ROADMAP.md](ROADMAP.md)** - Future enhancements and potential new epics to improve the application
 
 ## About This Talk Series
 
@@ -200,27 +205,65 @@ Here is an overview of the project files:
 
 ```
 ├── index.html              # Welcome/landing page
-├── slide1.html            # Slide 1: Why Agentic AI matters?
-├── slide2.html            # Slide 2: Agentic AI by 2030
-├── slide3.html            # Slide 3: AI Fundamentals
+├── slide1.html            # Slide 1: Agenda
+├── slide2.html            # Slide 2: Why it matters?
+├── slide3.html            # Slide 3: Agentic AI by 2030
 ├── slide4.html            # Slide 4: Brief History of AI
-├── slide5.html            # Slide 5: Responsible AI
-├── slide6.html            # Slide 6: AI by Industry & Function
-├── slide7.html            # Slide 7: Generative AI vs Agentic AI
-├── slide8.html            # Slide 8: AI Agent vs Agentic AI
-├── slide9.html            # Slide 9: What is an AI Agent?
-├── slide10.html           # Slide 10: Key Impacts of Agentic AI
-├── slide11.html           # Slide 11: AgentVerse
-├── slide12.html           # Slide 12: Agentic AI: Use Cases
-├── slide13.html           # Slide 13: AgentVerse: A MultiAgent Simulation
-├── slide14.html           # Slide 14: Demo 
-├── slide15.html           # Slide 15: So, what's next? 
-├── slide16.html           # Slide 16: Thank you!
+├── slide5.html            # Slide 5: AI Fundamentals
+├── slide6.html            # Slide 6: Responsible AI
+├── slide7.html            # Slide 7: AI by Industry & Function
+├── slide8.html            # Slide 8: Generative AI vs Agentic AI
+├── slide9.html            # Slide 9: AI Agent vs Agentic AI
+├── slide10.html           # Slide 10: What is an AI Agent?
+├── slide11.html           # Slide 11: Agentic AI Capabilities
+├── slide12.html           # Slide 12: AgentVerse: A MultiAgent Simulation
+├── slide13.html           # Slide 13: Key Impacts of Agentic AI
+├── slide14.html           # Slide 14: Agentic AI: Use Cases
+├── slide15.html           # Slide 15: Demo 
+├── slide16.html           # Slide 16: So, what's next? 
+├── slide17.html           # Slide 17: Thank you!
 ├── slide-template.html    # Template for creating new slides
 ├── config.js              # Presentation configuration
 ├── navbar.js              # Navigation bar component
 ├── navigation.js          # Slide navigation logic
 ├── styles.css             # All styling
 ├── images/                # Place your images here
+├── EPICS.md               # Developed epics documentation
+├── ROADMAP.md             # Future enhancement roadmap
 └── README.md              # This file
 ```
+
+## 🎯 Project Epics
+
+This presentation application is built on **7 core epics** (detailed in [EPICS.md](EPICS.md)):
+
+1. ✅ **Core Presentation Infrastructure** - Web-based slide system
+2. ✅ **Navigation & User Interaction** - Multi-device navigation
+3. ✅ **Content Presentation Framework** - Reusable components
+4. ✅ **Agentic AI Educational Content** - Comprehensive AI education
+5. ✅ **Presenter Branding & Configuration** - Easy customization
+6. ✅ **Visual Design & Theming** - Professional dark theme
+7. ✅ **Developer Experience & Documentation** - Clear guides
+
+## 🚀 Future Enhancements
+
+The [ROADMAP.md](ROADMAP.md) outlines **13 potential new epics** to further enhance the application:
+
+### High Priority
+- 🎮 **Interactive Demo Integration** - Live AI demonstrations
+- 📝 **Speaker Notes & Presenter Mode** - Professional delivery tools
+- ♿ **Accessibility Enhancements** - WCAG 2.1 AA compliance
+
+### Medium Priority
+- 📊 **Analytics & Audience Engagement** - Track presentation effectiveness
+- 🌍 **Multi-Language Support** - Global accessibility
+- 👥 **Collaborative Features** - Team presentation building
+- 📤 **Content Export & Sharing** - PDF, PPTX export
+- 📱 **Offline Mode & PWA** - Work anywhere
+
+### Additional Features
+- 🔍 **Search & Discovery**
+- ✨ **Slide Animations & Transitions**
+- 🤖 **AI-Powered Content Suggestions**
+- 🎨 **Template Marketplace**
+- 🎥 **Video Recording & Replay**
