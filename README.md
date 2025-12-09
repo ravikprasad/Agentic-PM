@@ -210,6 +210,7 @@ Here is an overview of the project files:
 ├── slide3.html            # Slide 3: Agentic AI by 2030
 ├── slide4.html            # Slide 4: Brief History of AI
 ├── slide5.html            # Slide 5: AI Fundamentals
+├── slide5 copy.html       # Alternative version with solution diagram
 ├── slide6.html            # Slide 6: Responsible AI
 ├── slide7.html            # Slide 7: AI by Industry & Function
 ├── slide8.html            # Slide 8: Generative AI vs Agentic AI
