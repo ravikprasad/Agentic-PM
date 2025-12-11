@@ -35,26 +35,32 @@ In addition to above four key areas, on-deman demo session could be planned to c
 ```
 Agentic PM/
 ├── index.html              # Welcome/landing page
-├── slide1.html            # Slide 1: The Daily Standup
-├── slide2.html            # Slide 2
-├── slide3.html            # Slide 3
-├── slide4.html            # Slide 4
-├── slide5.html            # Slide 5
-├── slide6.html            # Slide 6
-├── slide7.html            # Slide 7: From "AI Tool" to "AI Teammate"
-├── slide8.html            # Slide 8
-├── slide9.html            # Slide 9
-├── slide10.html           # Slide 10
-├── slide11.html           # Slide 11
-├── slide12.html           # Slide 12
-├── slide13.html           # Slide 13
-├── slide14.html           # Slide 14
+├── slide1.html            # Slide 1: Agenda
+├── slide2.html            # Slide 2: Why it matters?
+├── slide3.html            # Slide 3: Agentic AI by 2030
+├── slide4.html            # Slide 4: Brief History of AI
+├── slide5.html            # Slide 5: AI Fundamentals
+├── slide5 copy.html       # Alternative version with solution diagram
+├── slide6.html            # Slide 6: Responsible AI
+├── slide7.html            # Slide 7: AI by Industry & Function
+├── slide8.html            # Slide 8: Generative AI vs Agentic AI
+├── slide9.html            # Slide 9: AI Agent vs Agentic AI
+├── slide10.html           # Slide 10: What is an AI Agent?
+├── slide11.html           # Slide 11: Agentic AI Capabilities
+├── slide12.html           # Slide 12: AgentVerse: A MultiAgent Simulation
+├── slide13.html           # Slide 13: Key Impacts of Agentic AI
+├── slide14.html           # Slide 14: Agentic AI: Use Cases
+├── slide15.html           # Slide 15: Demo 
+├── slide16.html           # Slide 16: So, what's next? 
+├── slide17.html           # Slide 17: Thank you!
 ├── slide-template.html    # Template for creating new slides
 ├── config.js              # Presentation configuration
 ├── navbar.js              # Navigation bar component
 ├── navigation.js          # Slide navigation logic
 ├── styles.css             # All styling
 ├── images/                # Place your images here
+├── EPICS.md               # Developed epics documentation
+├── ROADMAP.md             # Future enhancement roadmap
 └── README.md              # This file
 ```
 
