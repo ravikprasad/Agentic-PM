@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title id="page-title">Agentic PM - Slide 18</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="config.js"></script>
+    <script src="navbar.js"></script>
+</head>
+<body>
+    
+    <div class="slide active">
+        
+        <div class="slide-content">
+            <!-- ========================================
+                 CONTENT AREA
+                 ======================================== -->
+            
+            <h1 class="wave-text">Implementing Agentic AI in PM</h1>
+            <h3 class="subtitle">A Practical Framework for Getting Started</h3>
+            
+            <div class="content-section">
+                <!-- Implementation Framework -->
+                <div class="theme-cards" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="theme-card">
+                        <h3>
+                            <i class="bi bi-compass" style="color: var(--accent);"></i> 1. Assess & Prepare
+                        </h3>
+                        <ul style="text-align: left; font-size: 0.9rem;">
+                            <li>Evaluate current PM maturity</li>
+                            <li>Identify high-value use cases</li>
+                            <li>Define success metrics (KPIs)</li>
+                            <li>Build organizational readiness</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="theme-card">
+                        <h3>
+                            <i class="bi bi-flask" style="color: var(--accent);"></i> 2. Pilot & Validate
+                        </h3>
+                        <ul style="text-align: left; font-size: 0.9rem;">
+                            <li>Start with low-risk, high-impact area</li>
+                            <li>Select appropriate AI agent tools</li>
+                            <li>Run controlled experiments</li>
+                            <li>Measure ROI and gather feedback</li>
+                        </ul>
+                    </div>
+
+                    <div class="theme-card">
+                        <h3>
+                            <i class="bi bi-arrows-expand" style="color: var(--accent);"></i> 3. Scale & Integrate
+                        </h3>
+                        <ul style="text-align: left; font-size: 0.9rem;">
+                            <li>Expand to multiple PM domains</li>
+                            <li>Integrate with existing tools</li>
+                            <li>Establish governance frameworks</li>
+                            <li>Build agent orchestration</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="theme-card">
+                        <h3>
+                            <i class="bi bi-arrow-repeat" style="color: var(--accent);"></i> 4. Optimize & Evolve
+                        </h3>
+                        <ul style="text-align: left; font-size: 0.9rem;">
+                            <li>Continuous learning & adaptation</li>
+                            <li>Monitor agent performance</li>
+                            <li>Refine human-AI collaboration</li>
+                            <li>Stay updated with AI advances</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 2rem; padding: 1rem; background: rgba(78, 205, 196, 0.1); border-left: 4px solid var(--accent); border-radius: 4px;">
+                    <p style="margin: 0; font-size: 0.95rem; color: var(--text-primary);">
+                        <i class="bi bi-lightbulb" style="color: var(--accent);"></i>
+                        <strong>Key Takeaway:</strong> Start small, measure impact, and scale systematically. Focus on augmenting PM capabilities, not replacing human judgment.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- ======================================== -->
+        </div>
+        
+        <div class="nav-controls">
+            <button class="btn btn-custom" id="prev-btn">
+                <i class="bi bi-arrow-left"></i> Previous
+            </button>
+            <span class="slide-indicator">18</span>
+            <button class="btn btn-custom" id="next-btn">
+                Next <i class="bi bi-arrow-right"></i>
+            </button>
+        </div>
+        
+        <div class="watermark">@ravikprasad</div>
+    </div>
+
+    <script src="navigation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Update page title from config
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.presentationConfig) {
+                const slideNumber = document.querySelector('.slide-indicator').textContent.split('/')[0].trim();
+                document.getElementById('page-title').textContent = 
+                    `${window.presentationConfig.event.name} - Slide ${slideNumber}`;
+            }
+        });
+    </script>
+</body>
+</html>
