@@ -341,6 +341,6 @@ When creating new slides, maintain:
 
 ---
 
-**Created by**: GitHub Copilot Agent
+**Created by**: GitHub Copilot
 **Date**: January 15, 2026
 **Based on**: Comprehensive review of slides 1-17
