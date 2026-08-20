@@ -3,7 +3,7 @@
 
 const presentationConfig = {
     presenter: {
-        name: "<a href='https://www.linkedin.com/in/ravikaushalprasad/' target='_blank' style='color: inherit; text-decoration: none; border-bottom: 1px solid var(--accent); transition: all 0.2s ease;'>Ravi Prasad</a>",
+        name: "<a href='https://www.linkedin.com/in/ravikaushalprasad/' target='_blank' style='color: inherit; text-decoration: none; border-bottom: 1px solid var(--accent); transition: all 0.2s ease;'>Ravi Kaushal Prasad</a>",
         title: "Sr. Technical Project Manager",
         company: "GitHub"
     },

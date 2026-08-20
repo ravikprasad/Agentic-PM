@@ -255,6 +255,51 @@ h2 {
     padding-left: 2.5rem; /* Increased indentation */
 }
 
+.linkedin-footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.home-linkedin-footer {
+    justify-content: center;
+}
+
+.linkedin-qr-link {
+    display: block;
+    flex: 0 0 auto;
+    padding: 0.35rem;
+    background: #ffffff;
+    border-radius: 6px;
+    line-height: 0;
+}
+
+.linkedin-qr {
+    width: 88px;
+    height: 88px;
+    object-fit: contain;
+}
+
+.linkedin-profile-link {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--text-primary);
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.linkedin-profile-link i {
+    color: #0a66c2;
+    font-size: 1.5rem;
+}
+
+.linkedin-profile-link:hover {
+    color: var(--accent-blue);
+    text-decoration: underline;
+}
+
 .stat-number {
     font-size: 3.5rem;
     font-weight: 700;
@@ -397,6 +442,17 @@ h2 {
     }
     .agent-word {
         font-size: calc(1rem + 2pt);
+    }
+    .linkedin-footer {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .linkedin-qr {
+        width: 72px;
+        height: 72px;
+    }
+    .linkedin-profile-link {
+        font-size: 0.8rem;
     }
 }
 
