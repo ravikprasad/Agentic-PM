@@ -81,6 +81,29 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
     
+    // Explicit handlers for prev/next buttons (skip slides that already use <a href>)
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    
+    if (prevBtn && prevBtn.tagName !== 'A') {
+        prevBtn.addEventListener('click', () => {
+            const prevSlide = findNextVisibleSlide(currentSlide, -1);
+            // Slide 1 has no previous slide, so go back to the home page instead
+            if (prevSlide) {
+                navigateToSlide(prevSlide);
+            } else {
+                window.location.href = 'index.html';
+            }
+        });
+    }
+    
+    if (nextBtn && nextBtn.tagName !== 'A') {
+        nextBtn.addEventListener('click', () => {
+            const nextSlide = findNextVisibleSlide(currentSlide, 1);
+            navigateToSlide(nextSlide);
+        });
+    }
+    
     // Mobile touch navigation
     let touchStartX = 0;
     let touchEndX = 0;
@@ -127,6 +150,8 @@ window.addEventListener('DOMContentLoaded', () => {
         
         // Ignore clicks on slideshow controls and within slideshow container
         if (e.target.closest('.theme-card') ||
+            e.target.closest('#prev-btn') ||
+            e.target.closest('#next-btn') ||
             e.target.closest('.slideshow-prev') || 
             e.target.closest('.slideshow-next') || 
             e.target.closest('.slideshow-dot') ||
