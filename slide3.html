@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">Agentic PM - Slide 3</title>
+    <title id="page-title">Agentic PM - Slide 2</title>
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -14,6 +14,53 @@
     <link rel="stylesheet" href="styles.css">
     <script src="config.js"></script>
     <script src="navbar.js"></script>
+    <style>
+        /* Scoped to slide2a: floating "from distance" questions */
+        .slide-content { position: relative; overflow: hidden; }
+
+        .wnai-title { position: relative; z-index: 2; font-size: 7rem !important; }
+
+        .floating-questions {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .floating-q {
+            position: absolute;
+            font-size: 1.4375rem;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            opacity: 0;
+            transform-origin: center;
+            animation: floatFromDistance 14s ease-in-out infinite;
+            animation-delay: var(--delay, 0s);
+            will-change: transform, opacity;
+        }
+
+        .fq-1 { top: 22%;    left: 10%;  --fromX:  35vw; --fromY:  22vh; --delay: 0s; }
+        .fq-2 { top: 26%;    right: 8%;  --fromX: -34vw; --fromY:  20vh; --delay: 2.8s; }
+        .fq-3 { bottom: 24%; left: 12%;  --fromX:  32vw; --fromY: -22vh; --delay: 5.6s; }
+        .fq-4 { bottom: 26%; right: 10%; --fromX: -32vw; --fromY: -20vh; --delay: 8.4s; }
+        .fq-5 { bottom: 8%;  left: 38%;  --fromX:   0vw; --fromY: -30vh; --delay: 11.2s; }
+
+        @keyframes floatFromDistance {
+            0%   { transform: translate(var(--fromX), var(--fromY)) scale(0.05); opacity: 0; }
+            15%  { opacity: 1; }
+            50%  { transform: translate(0, 0) scale(1); opacity: 1; }
+            85%  { opacity: 1; transform: translate(calc(var(--fromX) * -0.25), calc(var(--fromY) * -0.25)) scale(1.05); }
+            100% { transform: translate(calc(var(--fromX) * -0.55), calc(var(--fromY) * -0.55)) scale(1.1); opacity: 0; }
+        }
+
+        @media (max-width: 768px) {
+            .floating-q { font-size: 1.1875rem; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .floating-q { animation: none; opacity: 1; transform: none; }
+        }
+    </style>
 </head>
 <body>
     
@@ -24,65 +71,17 @@
                  CONTENT AREA - Replace this section
                  ======================================== -->
             
-            <h1 style="margin-bottom: 1.5rem;">Agentic AI by 2030</h1>
-            
-            <div class="content-section">
-                <div class="theme-cards">
-                    
-                    <!-- Stat Card 1 -->
-                    <div class="theme-card">
-                        <div class="stat-number">$50B</div>
-                        <p>AI Agent market from $5B in 2024</p>
-                    </div>
-                    
-                    <!-- Stat Card 2 -->
-                    <div class="theme-card">
-                        <div class="stat-number">33%</div>
-                        <p>Enterprise software usage of Agentic AI from 1% in 2024</p>
-                    </div>
-                    
-                    <!-- Stat Card 3 -->
-                    <div class="theme-card">
-                        <div class="stat-number">15%</div>
-                        <p>Day-to-day decision will be made autonomously through agentic AI from 0% in 2024</p>
-                    </div>
-                    
-                </div>
+            <h1 class="mb-3 wave-text wnai-title">Why we need AI?</h1>
 
-                <!-- References Section -->
-                <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(78, 205, 196, 0.2);">
-                    <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.5rem; font-style: italic;">
-                        References:
-                    </p>
-                    <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                        <a href="https://www.marketsandmarkets.com/PressReleases/ai-agents.asp" 
-                           target="_blank"
-                           style="font-size: 0.75rem; color: rgba(78, 205, 196, 0.8); text-decoration: none; transition: color 0.2s ease;"
-                           onmouseover="this.style.color='var(--teal-light)'"
-                           onmouseout="this.style.color='rgba(78, 205, 196, 0.8)'">
-                            <i class="bi bi-link-45deg" style="margin-right: 0.25rem;"></i>MarketsandMarkets: AI Agents Market Report
-                        </a>
-                        <a href="https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier" 
-                           target="_blank"
-                           style="font-size: 0.75rem; color: rgba(78, 205, 196, 0.8); text-decoration: none; transition: color 0.2s ease;"
-                           onmouseover="this.style.color='var(--teal-light)'"
-                           onmouseout="this.style.color='rgba(78, 205, 196, 0.8)'">
-                            <i class="bi bi-link-45deg" style="margin-right: 0.25rem;"></i>McKinsey: The Economic Potential of Generative AI
-                        </a>
-                        <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai#/" 
-                           target="_blank"
-                           style="font-size: 0.75rem; color: rgba(78, 205, 196, 0.8); text-decoration: none; transition: color 0.2s ease;"
-                           onmouseover="this.style.color='var(--teal-light)'"
-                           onmouseout="this.style.color='rgba(78, 205, 196, 0.8)'">
-                            <i class="bi bi-link-45deg" style="margin-right: 0.25rem;"></i>McKinsey: The State of AI
-                        </a>
-                    </div>
-                </div>
+            <div class="floating-questions" aria-hidden="true">
+                <span class="floating-q fq-1">Work smarter, not harder?</span>
+                <span class="floating-q fq-2">More time with family and friends?</span>
+                <span class="floating-q fq-3">Make better decisions, faster?</span>
+                <span class="floating-q fq-4">Need a tireless teammate?</span>
+                <span class="floating-q fq-5">Spend more time strategizing?</span>
             </div>
-            
-            <!-- ======================================== -->
+
         </div>
-        
         <div class="nav-controls">
             <button class="btn btn-custom" id="prev-btn">
                 <i class="bi bi-arrow-left"></i> Previous
