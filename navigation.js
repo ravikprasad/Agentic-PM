@@ -126,7 +126,8 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         
         // Ignore clicks on slideshow controls and within slideshow container
-        if (e.target.closest('.slideshow-prev') || 
+        if (e.target.closest('.theme-card') ||
+            e.target.closest('.slideshow-prev') || 
             e.target.closest('.slideshow-next') || 
             e.target.closest('.slideshow-dot') ||
             e.target.closest('.slideshow-container')) {
