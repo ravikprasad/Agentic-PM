@@ -271,21 +271,6 @@ h2 {
     justify-content: center;
 }
 
-.linkedin-qr-link {
-    display: block;
-    flex: 0 0 auto;
-    padding: 0.35rem;
-    background: #ffffff;
-    border-radius: 6px;
-    line-height: 0;
-}
-
-.linkedin-qr {
-    width: 88px;
-    height: 88px;
-    object-fit: contain;
-}
-
 .linkedin-profile-link {
     display: flex;
     align-items: center;
@@ -293,6 +278,7 @@ h2 {
     color: var(--text-primary);
     font-size: 1rem;
     text-decoration: none;
+    overflow-wrap: anywhere;
 }
 
 .linkedin-profile-link i {
@@ -451,10 +437,6 @@ h2 {
     .linkedin-footer {
         flex-direction: column;
         gap: 0.5rem;
-    }
-    .linkedin-qr {
-        width: 72px;
-        height: 72px;
     }
     .linkedin-profile-link {
         font-size: 0.8rem;
