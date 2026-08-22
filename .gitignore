@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# Large reference PDFs (kept local only)
+*.pdf
