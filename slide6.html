@@ -15,49 +15,54 @@
     <script src="config.js"></script>
     <script src="navbar.js"></script>
     <style>
-        /* Scoped to slide 6: two-column image + definitions with staggered reveal */
-        .fund-row {
-            display: flex;
-            gap: 1.5rem;
-            align-items: stretch;
+        /* Scoped to slide 6: image as background, definitions overlay one-by-one */
+        .fund-stage {
+            position: relative;
             width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
         }
-        .fund-image-col {
-            flex: 0 0 45%;
-            max-width: 45%;
-            display: flex;
-        }
-        .fund-image-col .slide-image-container {
-            height: 100%;
+        .fund-image {
+            display: block;
             width: 100%;
-            margin: 0;
-        }
-        .fund-image-col .slide-image {
-            width: 100%;
-            height: 100%;
-            max-width: 100%;
-            max-height: 100%;
+            height: auto;
             object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 0 0 1px var(--border-color), 0 20px 40px -10px rgba(0,0,0,0.5);
+            animation: fundImageDim 1.2s ease-out 10s forwards;
         }
-        .fund-defs {
-            flex: 1;
-            text-align: left;
+        @keyframes fundImageDim {
+            to { opacity: 0.18; filter: blur(2px); }
+        }
+
+        .fund-defs-overlay {
+            position: absolute;
+            top: 4%;
+            bottom: 4%;
+            left: 6%;
+            right: 6%;
             display: flex;
             flex-direction: column;
-            gap: 0.75rem;
+            gap: 0.6rem;
+            justify-content: center;
+            pointer-events: none;
         }
         .def-block {
             opacity: 0;
             transform: translateY(-14px);
             animation: defAppear 0.6s ease-out forwards;
-            padding: 0.5rem 0.85rem;
+            padding: 0.55rem 0.95rem;
+            background: rgba(10, 15, 30, 0.82);
             border-left: 3px solid var(--accent);
-            background: rgba(255, 255, 255, 0.04);
-            border-radius: 4px;
+            border-radius: 6px;
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            text-align: left;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.35);
         }
         .def-block h4 {
             font-size: 1rem;
-            margin: 0 0 0.25rem 0;
+            margin: 0 0 0.2rem 0;
             color: var(--accent);
             font-weight: 600;
         }
@@ -67,28 +72,31 @@
         }
         .def-block li {
             font-size: 0.85rem;
-            color: var(--text-secondary);
+            color: var(--text-primary);
             line-height: 1.35;
         }
 
-        .def-1 { animation-delay: 15s; }
-        .def-2 { animation-delay: 19s; }
-        .def-3 { animation-delay: 23s; }
-        .def-4 { animation-delay: 27s; }
-        .def-5 { animation-delay: 31s; }
-        .def-6 { animation-delay: 35s; }
+        .def-1 { animation-delay: 10s; }
+        .def-2 { animation-delay: 14s; }
+        .def-3 { animation-delay: 18s; }
+        .def-4 { animation-delay: 22s; }
+        .def-5 { animation-delay: 26s; }
+        .def-6 { animation-delay: 30s; }
 
         @keyframes defAppear {
             to { opacity: 1; transform: translateY(0); }
         }
 
         @media (max-width: 900px) {
-            .fund-row { flex-direction: column; }
-            .fund-image-col { flex: 1 1 100%; max-width: 100%; }
+            .fund-defs-overlay { top: 2%; bottom: 2%; left: 3%; right: 3%; gap: 0.4rem; }
+            .def-block { padding: 0.4rem 0.7rem; }
+            .def-block h4 { font-size: 0.9rem; }
+            .def-block li { font-size: 0.75rem; }
         }
 
         @media (prefers-reduced-motion: reduce) {
             .def-block { opacity: 1; transform: none; animation: none; }
+            .fund-image { animation: none; opacity: 1; filter: none; }
         }
     </style>
 </head>
@@ -105,15 +113,9 @@
             <h3 class="subtitle mb-5">Let's decipher AI together</h3>
             
             <div class="content-section">
-                <div class="fund-row">
-                    <div class="fund-image-col">
-                        <div class="slide-image-container">
-                            <img src="images/ai-fundamental-refresher.png"
-                                 alt="Layers of AI"
-                                 class="slide-image">
-                        </div>
-                    </div>
-                    <div class="fund-defs" aria-live="polite">
+                <div class="fund-stage">
+                    <img class="fund-image" src="images/ai-fundamental-refresher.png" alt="Layers of AI">
+                    <div class="fund-defs-overlay" aria-live="polite">
                         <div class="def-block def-1">
                             <h4>Artificial Intelligence</h4>
                             <ul>
