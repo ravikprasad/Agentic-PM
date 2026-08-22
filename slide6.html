@@ -14,6 +14,83 @@
     <link rel="stylesheet" href="styles.css?v=1.1">
     <script src="config.js"></script>
     <script src="navbar.js"></script>
+    <style>
+        /* Scoped to slide 6: two-column image + definitions with staggered reveal */
+        .fund-row {
+            display: flex;
+            gap: 1.5rem;
+            align-items: stretch;
+            width: 100%;
+        }
+        .fund-image-col {
+            flex: 0 0 45%;
+            max-width: 45%;
+            display: flex;
+        }
+        .fund-image-col .slide-image-container {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+        .fund-image-col .slide-image {
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        .fund-defs {
+            flex: 1;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .def-block {
+            opacity: 0;
+            transform: translateY(-14px);
+            animation: defAppear 0.6s ease-out forwards;
+            padding: 0.5rem 0.85rem;
+            border-left: 3px solid var(--accent);
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 4px;
+        }
+        .def-block h4 {
+            font-size: 1rem;
+            margin: 0 0 0.25rem 0;
+            color: var(--accent);
+            font-weight: 600;
+        }
+        .def-block ul {
+            margin: 0;
+            padding-left: 1.1rem;
+        }
+        .def-block li {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.35;
+        }
+
+        .def-1 { animation-delay: 15s; }
+        .def-2 { animation-delay: 19s; }
+        .def-3 { animation-delay: 23s; }
+        .def-4 { animation-delay: 27s; }
+        .def-5 { animation-delay: 31s; }
+        .def-6 { animation-delay: 35s; }
+
+        @keyframes defAppear {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 900px) {
+            .fund-row { flex-direction: column; }
+            .fund-image-col { flex: 1 1 100%; max-width: 100%; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .def-block { opacity: 1; transform: none; animation: none; }
+        }
+    </style>
 </head>
 <body>
     
@@ -28,11 +105,57 @@
             <h3 class="subtitle mb-5">Let's decipher AI together</h3>
             
             <div class="content-section">
-                <!-- Image Container -->
-                <div class="slide-image-container">
-                    <img src="images/ai-fundamental-refresher.png" 
-                         alt="Layers of AI" 
-                         class="slide-image">
+                <div class="fund-row">
+                    <div class="fund-image-col">
+                        <div class="slide-image-container">
+                            <img src="images/ai-fundamental-refresher.png"
+                                 alt="Layers of AI"
+                                 class="slide-image">
+                        </div>
+                    </div>
+                    <div class="fund-defs" aria-live="polite">
+                        <div class="def-block def-1">
+                            <h4>Artificial Intelligence</h4>
+                            <ul>
+                                <li>Technique that enables machines to mimic human intelligence.</li>
+                                <li>Example: YouTube, Facebook, Alexa, Netflix, autonomous cars.</li>
+                            </ul>
+                        </div>
+                        <div class="def-block def-2">
+                            <h4>Machine Learning</h4>
+                            <ul>
+                                <li>Advanced algorithms detect patterns in large data sets to learn and adapt.</li>
+                                <li>Example: social media, search and ads, fraud detection.</li>
+                            </ul>
+                        </div>
+                        <div class="def-block def-3">
+                            <h4>Neural Network</h4>
+                            <ul>
+                                <li>Subset of ML: layered, interconnected nodes replicate the human brain and improve over time.</li>
+                                <li>Example: face recognition, object detection for autonomous systems.</li>
+                            </ul>
+                        </div>
+                        <div class="def-block def-4">
+                            <h4>Deep Learning</h4>
+                            <ul>
+                                <li>Built on neural networks; trains itself for in-depth data processing and analytics.</li>
+                                <li>Example: digital voice assistants such as Siri or Alexa.</li>
+                            </ul>
+                        </div>
+                        <div class="def-block def-5">
+                            <h4>Generative AI</h4>
+                            <ul>
+                                <li>Trained on vast datasets to generate text, code, or images.</li>
+                                <li>Example: ChatGPT, Copilot, Gemini, chatbots.</li>
+                            </ul>
+                        </div>
+                        <div class="def-block def-6">
+                            <h4>Natural Language Processing</h4>
+                            <ul>
+                                <li>Ability to understand, process, and generate human language (text or voice).</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
             
