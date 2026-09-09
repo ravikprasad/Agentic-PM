@@ -1,6 +1,11 @@
 ---
-name: project-charter-pmbok-guided
-description: Create, review, or improve concise, decision-ready project charters using PMI/PMBOK-aligned practices. Use when a user needs project authorization, wants source material converted into a charter, or needs a charter assessed for purpose, objectives, scope, governance, milestones, risks, resources, and approval readiness.
+name: "project-charter-pmbok-guided"
+description: >-
+  Create, review, or improve concise, decision-ready project charters using
+  PMI/PMBOK-aligned practices. Use when a user needs project authorization,
+  wants source material converted into a charter, or needs a charter assessed
+  for purpose, objectives, scope, governance, milestones, risks, resources, and
+  approval readiness.
 ---
 
 # PMBOK-Guided Project Charter
