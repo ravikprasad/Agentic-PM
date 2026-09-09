@@ -92,7 +92,7 @@ window.addEventListener('DOMContentLoaded', () => {
             if (prevSlide) {
                 navigateToSlide(prevSlide);
             } else {
-                window.location.href = 'index.html';
+                window.location.href = 'presentation.html';
             }
         });
     }

@@ -26,15 +26,17 @@ In addition to above four key areas, on-deman demo session could be planned to c
 
 
 ## Quick Start
-1. Open 'index.html' in a browser to start the presetation
-2. Navigate using arrow keys, spacebar, or swipe gestures on mobile
-3. Edit 'config.js' to customize presentore information
+1. Open `index.html` in a browser to view the workshop landing page
+2. Select **Start Workshop** to open the presentation cover
+3. Navigate the slides using arrow keys, spacebar, or swipe gestures on mobile
+4. Edit `config.js` to customize presenter information
 
 ## What's Included
 
 ```
 Agentic PM/
-├── index.html              # Welcome/landing page
+├── index.html              # Workshop landing page
+├── presentation.html       # Presentation welcome page
 ├── slide1.html            # Slide 1: Agenda
 ├── slide2.html            # Slide 2: Why it matters?
 ├── slide3.html            # Slide 3: Agentic AI by 2030
@@ -211,7 +213,8 @@ Modern browsers recommended:
 Here is an overview of the project files:
 
 ```
-├── index.html              # Welcome/landing page
+├── index.html              # Workshop landing page
+├── presentation.html       # Presentation welcome page
 ├── slide1.html            # Slide 1: Agenda
 ├── slide2.html            # Slide 2: Why it matters?
 ├── slide3.html            # Slide 3: Agentic AI by 2030
