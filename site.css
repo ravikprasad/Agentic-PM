@@ -244,7 +244,12 @@ h1:focus-visible { outline: 2px solid var(--accent); outline-offset: 8px; }
 .detail-label { display: block; color: var(--muted); margin-bottom: 8px; }
 .site-footer { border-top: 1px solid var(--line); background: #010409; padding-block: 24px; color: var(--muted); font-size: 14px; }
 .footer-inner { display: flex; justify-content: space-between; gap: 24px; }
-.site-views { margin-top: 16px; text-align: center; font-size: 12px; letter-spacing: .04em; font-variant-numeric: tabular-nums; }
+/* Name left, view count centered, "Back to top" right; columns are fixed so a hidden count does not shift the link. */
+.footer-inner.has-views { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+.footer-inner.has-views > :first-child { grid-column: 1; justify-self: start; }
+.footer-inner.has-views > .site-views { grid-column: 2; }
+.footer-inner.has-views > :last-child { grid-column: 3; justify-self: end; }
+.site-views { text-align: center; font-size: 12px; letter-spacing: .04em; font-variant-numeric: tabular-nums; }
 .site-views[hidden] { display: none; }
 
 @media (min-width: 768px) and (max-width: 1011px) {
@@ -274,6 +279,9 @@ h1:focus-visible { outline: 2px solid var(--accent); outline-offset: 8px; }
     .article-hero { padding-block: 48px 40px; }
     .article-body { padding-block: 40px 64px; }
     .contact { padding-bottom: 56px; }
+    .footer-inner.has-views { grid-template-columns: 1fr 1fr; row-gap: 12px; }
+    .footer-inner.has-views > :last-child { grid-column: 2; grid-row: 1; }
+    .footer-inner.has-views > .site-views { grid-column: 1 / -1; grid-row: 2; }
 }
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
