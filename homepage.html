@@ -68,13 +68,12 @@
             border-bottom: 1px solid var(--line);
         }
         .wordmark { font: 600 20px/1.2 var(--font); letter-spacing: -.02em; }
-        .header-note, .eyebrow, .section-label, .work-category, .detail-label {
+        .eyebrow, .section-label, .work-category, .detail-label {
             font-size: 14px;
             font-weight: 500;
             letter-spacing: .08em;
             text-transform: uppercase;
         }
-        .header-note { color: var(--muted); }
         .primary-nav { display: flex; gap: 32px; margin-left: auto; font-size: 16px; }
         .hero {
             padding-block: 96px 88px;
@@ -235,7 +234,6 @@
             .wrap { width: 90%; }
             .header-inner { min-height: 96px; flex-wrap: wrap; gap: 12px; padding-block: 16px; }
             .wordmark { font-size: 18px; }
-            .header-note { display: none; }
             .primary-nav { gap: 20px; font-size: 16px; }
             .hero { padding-block: 48px 56px; }
             h1 { margin-bottom: 40px; }
@@ -269,10 +267,10 @@
     <header class="site-header">
         <div class="wrap header-inner">
             <a class="wordmark" id="header-name" href="#top">Ravi Kaushal Prasad</a>
-            <span class="header-note">( Work &amp; Ideas )</span>
             <nav class="primary-nav" aria-label="Primary">
                 <a href="#about">About</a>
                 <a href="#work">Work</a>
+                <a href="#blog">Blog</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
@@ -361,8 +359,17 @@
             </ol>
         </section>
 
+        <section class="section wrap" id="blog" aria-labelledby="blog-title">
+            <p class="section-label"><span>04</span> Blog</p>
+            <h2 class="section-heading" id="blog-title">Notes &amp;<br><em>perspectives.</em></h2>
+            <!-- Add posts as list items using the same markup as the work list above. -->
+            <ol class="work-list">
+                <li><div class="work-link"><span class="work-number">01</span><span><span class="work-title">Posts coming soon</span><span class="work-category">Application security &middot; AI &middot; Program leadership</span></span></div></li>
+            </ol>
+        </section>
+
         <section class="section contact wrap" id="contact" aria-labelledby="contact-title">
-            <p class="section-label"><span>04</span> Contact</p>
+            <p class="section-label"><span>05</span> Contact</p>
             <div class="contact-grid">
                 <h2 class="section-heading" id="contact-title">Let's talk<br><em>technology &amp; impact.</em></h2>
                 <div class="contact-details">
