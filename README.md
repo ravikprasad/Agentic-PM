@@ -54,6 +54,12 @@ created automatically. It becomes a static, wrapping list when reduced motion
 is preferred.
 The About section links to [the PDF résumé](Ravi-Kaushal-Prasad-Resume.pdf).
 Replace that file with an updated PDF using the same filename to keep the link current.
+The Blog section's first post shows its slide deck as 1600×900 JPEG images in
+[images/blog/pm-certification/](images/blog/pm-certification/), one per slide
+(`slide-01.jpg`, `slide-02.jpg`, …). To update them, export the deck to PDF,
+render each page to a JPEG with the same names, and update each slide's alt
+text in the HTML. The viewer shows one slide at a time with previous/next
+buttons, arrow keys and touch swipe. Without JavaScript, all slides stack.
 
 ## What's Included
 
