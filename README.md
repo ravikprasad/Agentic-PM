@@ -26,15 +26,38 @@ In addition to above four key areas, on-deman demo session could be planned to c
 
 
 ## Quick Start
-1. Open 'index.html' in a browser to start the presetation
+1. Open [homepage.html](homepage.html), then select **Start Presentation**
 2. Navigate using arrow keys, spacebar, or swipe gestures on mobile
 3. Edit 'config.js' to customize presentore information
+
+### Portfolio homepage
+
+The main landing page is [homepage.html](homepage.html). The site root and
+legacy [index.html](index.html) URLs redirect there, preserving query strings and
+section anchors when JavaScript is enabled. Presentation home links return
+directly to the homepage.
+It uses GitHub's Mona Sans variable font from GitHub's asset CDN, with system
+sans-serif fallbacks, dark surfaces, and a navy-to-purple hero background.
+The introduction, about, highlights, and contact sections contain résumé-based
+copy that can be edited directly in the HTML. Presenter details and the first work
+entry use [config.js](config.js); update work labels and destinations together.
+Homepage styles are self-contained and do not change the presentation slides.
+The final hero line rotates through four phrases every three seconds. Edit the
+`hero-phrase` spans and their screen-reader summary together. The animation can
+be paused; reduced-motion preferences show all four phrases without animation.
+The core competencies banner above About scrolls continuously in a seamless
+40-second loop. Edit its six list items in the HTML; the second visual copy is
+created automatically. It has its own pause control and becomes a static,
+wrapping list when reduced motion is preferred.
+The About section links to [the PDF résumé](Ravi-Kaushal-Prasad-Resume.pdf).
+Replace that file with an updated PDF using the same filename to keep the link current.
 
 ## What's Included
 
 ```
 Agentic PM/
-├── index.html              # Welcome/landing page
+├── index.html              # Redirect to the main homepage
+├── homepage.html           # Main landing page
 ├── slide1.html            # Slide 1: Agenda
 ├── slide2.html            # Slide 2: Why it matters?
 ├── slide3.html            # Slide 3: Agentic AI by 2030
@@ -211,7 +234,8 @@ Modern browsers recommended:
 Here is an overview of the project files:
 
 ```
-├── index.html              # Welcome/landing page
+├── index.html              # Redirect to the main homepage
+├── homepage.html           # Main landing page
 ├── slide1.html            # Slide 1: Agenda
 ├── slide2.html            # Slide 2: Why it matters?
 ├── slide3.html            # Slide 3: Agentic AI by 2030

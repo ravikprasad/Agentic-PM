@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0d1117">
+    <meta name="description" content="Ravi Kaushal Prasad is a human-centered technical program leader with over two decades of experience across GitHub and Microsoft, application security, AI, and enterprise delivery.">
+    <title id="page-title">Ravi Kaushal Prasad - Work &amp; Ideas</title>
+    <link rel="preconnect" href="https://github.githubassets.com" crossorigin>
+    <script src="config.js" defer></script>
+    <style>
+        @font-face {
+            font-family: "Mona Sans";
+            src: url("https://github.githubassets.com/assets/MonaSansVF-wdth-wght-opsz-7a868ff47c93bd97.woff2") format("woff2");
+            font-style: normal;
+            font-weight: 200 900;
+            font-stretch: 75% 125%;
+            font-display: swap;
+        }
+
+        :root {
+            color-scheme: dark;
+            --background: #0d1117;
+            --text: #f0f6fc;
+            --muted: #9198a1;
+            --accent: #a5a0ff;
+            --line: #3d444d;
+            --font: "Mona Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        }
+
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+        body {
+            margin: 0;
+            background: var(--background);
+            color: var(--text);
+            font: 400 18px/1.5 var(--font);
+        }
+        a { color: inherit; text-decoration: none; }
+        a, button { -webkit-tap-highlight-color: transparent; }
+        a:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; }
+        a:hover { color: var(--accent); }
+        p, h1, h2, h3, dl, dd, figure { margin: 0; }
+        .wrap { width: 92%; max-width: 1280px; margin-inline: auto; }
+        .skip-link {
+            position: fixed;
+            top: 12px;
+            left: 4%;
+            z-index: 10;
+            padding: 10px 18px;
+            background: var(--text);
+            color: var(--background);
+            transform: translateY(-160%);
+        }
+        .skip-link:focus { transform: translateY(0); }
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 5;
+            background: rgb(0 0 0 / 94%);
+            backdrop-filter: blur(16px);
+        }
+        .header-inner {
+            min-height: 86px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            border-bottom: 1px solid var(--line);
+        }
+        .wordmark { font: 600 20px/1.2 var(--font); letter-spacing: -.02em; }
+        .header-note, .eyebrow, .section-label, .work-category, .detail-label {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+        .header-note { color: var(--muted); }
+        .primary-nav { display: flex; gap: 32px; margin-left: auto; font-size: 16px; }
+        .hero {
+            padding-block: 96px 88px;
+            background:
+                radial-gradient(ellipse at 50% 115%, rgb(119 92 255 / 40%), transparent 58%),
+                linear-gradient(#000240, #0d1117 117%);
+        }
+        h1, h2, h3 { font-family: var(--font); font-weight: 425; color: #fff; }
+        h1 {
+            display: flex;
+            flex-direction: column;
+            gap: .3em;
+            margin-bottom: 64px;
+            font-size: 64px;
+            line-height: 1.08;
+            letter-spacing: -.035em;
+        }
+        h1 span { display: block; }
+        em { color: var(--accent); font-style: normal; font-weight: inherit; }
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip-path: inset(50%);
+            white-space: nowrap;
+        }
+        h1 .hero-rotation {
+            display: grid;
+            overflow: hidden;
+            overflow-wrap: anywhere;
+            color: var(--accent);
+        }
+        .hero-phrase {
+            grid-area: 1 / 1;
+            min-width: 0;
+            animation: rotate-phrase 12s ease-in-out infinite;
+        }
+        .hero-phrase:nth-child(2) { animation-delay: -9s; }
+        .hero-phrase:nth-child(3) { animation-delay: -6s; }
+        .hero-phrase:nth-child(4) { animation-delay: -3s; }
+        .hero-rotation.is-paused .hero-phrase { animation-play-state: paused; }
+        .rotation-toggle {
+            margin-bottom: 24px;
+            padding: 8px 12px;
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            background: transparent;
+            color: var(--muted);
+            font: 400 14px/1.5 var(--font);
+            cursor: pointer;
+        }
+        .rotation-toggle:hover { color: var(--text); }
+        .rotation-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+        @keyframes rotate-phrase {
+            0%, 15% { opacity: 1; transform: translateY(0); }
+            25% { opacity: 0; transform: translateY(-12px); }
+            26%, 90% { opacity: 0; transform: translateY(12px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .hero-base {
+            display: grid;
+            grid-template-columns: 1fr 1.65fr;
+            gap: 5vw;
+            border-top: 1px solid var(--line);
+            padding-top: 35px;
+        }
+        .intro { max-width: 440px; color: var(--muted); font-size: 18px; }
+        .details { display: grid; gap: 18px; }
+        .details > div { display: grid; grid-template-columns: 80px 1fr; gap: 18px; }
+        .details dt { color: var(--muted); font-size: 14px; letter-spacing: .08em; text-transform: uppercase; padding-top: 5px; }
+        .details dd { font-size: 18px; }
+        .text-link { display: inline-flex; align-items: center; gap: 24px; border-bottom: 1px solid var(--line); padding-bottom: 5px; }
+        .topic-strip { display: flex; align-items: center; border-block: 1px solid var(--line); background: #010409; }
+        .topic-window { flex: 1; min-width: 0; overflow: hidden; }
+        .topic-track { display: flex; width: max-content; min-width: 200%; }
+        .topic-strip.is-ready .topic-track { animation: roll-competencies 40s linear infinite; }
+        .topic-strip.is-paused .topic-track { animation-play-state: paused; }
+        .ticker-toggle { flex-shrink: 0; min-width: 84px; margin: 0 16px; }
+        .topics {
+            display: flex;
+            flex: 1 0 auto;
+            justify-content: space-between;
+            align-items: center;
+            gap: 32px;
+            padding: 22px 16px;
+            margin: 0;
+            list-style: none;
+            color: var(--muted);
+            font-size: 16px;
+            white-space: nowrap;
+        }
+        .topics li { display: flex; align-items: center; gap: 32px; }
+        .topics li::after { content: "\2217"; color: var(--accent); font-size: 20px; }
+        @keyframes roll-competencies {
+            to { transform: translateX(-50%); }
+        }
+        .section { padding-top: clamp(72px, 8vw, 140px); }
+        .section-label {
+            display: flex;
+            gap: 24px;
+            padding-top: 22px;
+            border-top: 1px solid var(--line);
+            margin-bottom: 56px;
+            color: var(--muted);
+        }
+        .section-label span { color: var(--accent); }
+        .about-grid { display: grid; grid-template-columns: minmax(220px, 304px) 1fr; gap: 5vw; }
+        .portrait { width: 100%; aspect-ratio: 4/5; object-fit: cover; border: 1px solid var(--line); border-radius: 12px; }
+        .about-copy { max-width: 800px; }
+        .about-copy h2 { font-size: clamp(28px, 3vw, 48px); line-height: 1.12; letter-spacing: -.03em; margin-bottom: 28px; }
+        .about-copy p { max-width: 650px; margin-bottom: 22px; color: var(--muted); }
+        .social-links { display: flex; flex-wrap: wrap; gap: 32px; margin-top: 32px; font-size: 16px; }
+        .highlights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .highlight { padding: 28px; border: 1px solid var(--line); border-radius: 12px; background: #151b23; }
+        .highlight h3 { font-size: clamp(26px, 2.5vw, 36px); line-height: 1.15; letter-spacing: -.025em; margin-bottom: 16px; }
+        .highlight p { color: var(--muted); font-size: 18px; max-width: 280px; }
+        .section-heading {
+            font-size: clamp(36px, 4vw, 64px);
+            line-height: 1.08;
+            letter-spacing: -.035em;
+            margin-bottom: 52px;
+        }
+        .work-list { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line); }
+        .work-link {
+            display: grid;
+            grid-template-columns: 40px 1fr 36px;
+            align-items: center;
+            gap: 20px;
+            padding: 25px 18px;
+            border-bottom: 1px solid var(--line);
+            transition: background .2s ease;
+        }
+        .work-link:hover { background: #151b23; }
+        .work-number { align-self: start; padding-top: 12px; color: var(--accent); font-size: 14px; }
+        .work-title { display: block; font: 500 clamp(24px, 2.5vw, 36px)/1.2 var(--font); letter-spacing: -.025em; }
+        .work-category { display: block; margin-top: 8px; color: var(--muted); font-size: 14px; }
+        .work-arrow { font-size: 26px; color: var(--muted); transition: transform .2s ease; }
+        .work-link:hover .work-arrow { color: var(--accent); transform: translateX(5px); }
+        .contact { padding-bottom: 90px; }
+        .contact-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: end; }
+        .contact .section-heading { margin: 0; }
+        .contact-details { display: grid; gap: 28px; }
+        .detail-label { display: block; color: var(--muted); margin-bottom: 8px; }
+        .site-footer { border-top: 1px solid var(--line); background: #010409; padding-block: 24px; color: var(--muted); font-size: 14px; }
+        .footer-inner { display: flex; justify-content: space-between; gap: 24px; }
+
+        @media (min-width: 768px) and (max-width: 1011px) {
+            h1 { font-size: 56px; }
+        }
+        @media (max-width: 767px) {
+            h1 { font-size: 40px; line-height: 1.149; }
+        }
+        @media (max-width: 700px) {
+            html { scroll-padding-top: 120px; }
+            .wrap { width: 90%; }
+            .header-inner { min-height: 96px; flex-wrap: wrap; gap: 12px; padding-block: 16px; }
+            .wordmark { font-size: 18px; }
+            .header-note { display: none; }
+            .primary-nav { gap: 20px; font-size: 16px; }
+            .hero { padding-block: 48px 56px; }
+            h1 { margin-bottom: 40px; }
+            .hero-base, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+            .section-label { margin-bottom: 32px; }
+            .about-grid figure { max-width: 304px; }
+            .highlights { grid-template-columns: 1fr; gap: 28px; }
+            .highlight { border-bottom: 1px solid var(--line); padding-bottom: 24px; }
+            .work-link { grid-template-columns: 24px 1fr 22px; padding: 22px 0; gap: 12px; }
+            .work-number { padding-top: 6px; }
+            .work-category { letter-spacing: .1em; }
+            .contact { padding-bottom: 56px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { transition: none !important; }
+            .hero-phrase { animation: none; grid-area: auto; }
+            .hero-rotation { gap: .4em; }
+            .rotation-toggle { display: none; }
+            .topic-strip { display: block; }
+            .topic-strip.is-ready .topic-track { animation: none; }
+            .topic-track { width: auto; min-width: 0; }
+            .topics { flex-wrap: wrap; justify-content: center; gap: 16px; white-space: normal; }
+            .topics li { min-width: 0; overflow-wrap: anywhere; }
+            .topics[aria-hidden="true"] { display: none; }
+        }
+    </style>
+</head>
+<body id="top">
+    <a class="skip-link" href="#work">Skip to work</a>
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="wordmark" id="header-name" href="#top">Ravi Kaushal Prasad</a>
+            <span class="header-note">( Work &amp; Ideas )</span>
+            <nav class="primary-nav" aria-label="Primary">
+                <a href="#about">About</a>
+                <a href="#work">Work</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="wrap">
+                <h1 id="hero-title">
+                    <span>Technical Program Leader</span>
+                    <span>delivering impact in</span>
+                    <span class="visually-hidden">Human-centered technology; innovative application security &amp; AI-enabled products &amp; services; multi-million initiatives from discovery &amp; strategy; complex global technical cross-group engagements.</span>
+                    <span class="hero-rotation" id="hero-rotation" aria-hidden="true">
+                        <span class="hero-phrase">Human-centered technology</span>
+                        <span class="hero-phrase">innovative application security &amp; AI-enabled products &amp; services</span>
+                        <span class="hero-phrase">multi-million initiatives from discovery &amp; strategy</span>
+                        <span class="hero-phrase">complex global technical cross-group engagements</span>
+                    </span>
+                </h1>
+                <button class="rotation-toggle" type="button" aria-controls="hero-rotation" aria-pressed="false">Pause animation</button>
+                <div class="hero-base">
+                    <p class="intro">I bring over two decades of experience turning complex technology initiatives into customer value, from application security and developer platforms to AI-enabled products and services.</p>
+                    <dl class="details">
+                        <div><dt>Now</dt><dd id="presenter-title">Sr. Technical Project Manager, GitHub</dd></div>
+                        <div><dt>Focus</dt><dd>Application security, developer experience, AI adoption, and global technical program delivery.</dd></div>
+                        <div><dt>Explore</dt><dd><a class="text-link" href="slide1.html">Start Presentation <span aria-hidden="true">&rarr;</span></a></dd></div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <section class="topic-strip" aria-label="Core competencies">
+            <div class="topic-window">
+                <div class="topic-track" id="competencies-track">
+                    <ul class="topics">
+                        <li>Technical Program Management</li>
+                        <li>Cybersecurity</li>
+                        <li>SAST/Application Security (CodeQL)</li>
+                        <li>AI enabled products &amp; services</li>
+                        <li>Developer Experience using GitHub</li>
+                        <li>Solutions Engineering</li>
+                    </ul>
+                </div>
+            </div>
+            <button class="rotation-toggle ticker-toggle" type="button" aria-label="Pause competencies" aria-controls="competencies-track" aria-pressed="false">Pause</button>
+        </section>
+
+        <section class="section wrap" id="about" aria-labelledby="about-title">
+            <p class="section-label"><span>01</span> About</p>
+            <div class="about-grid">
+                <figure><img class="portrait" src="images/RavikPrasad.jpeg" alt="Ravi Kaushal Prasad" width="608" height="760" loading="lazy"></figure>
+                <div class="about-copy">
+                    <h2 id="about-title">Human-centered technical leadership.<br><em>Engineering meaningful impact.</em></h2>
+                    <p>With 20+ years in technology, I build programs that connect application security, developer productivity and customer outcomes.</p>
+                    <p>At GitHub, I lead global enterprise programs for developer platform migrations, securing applications using GitHub Advanced Security and CodeQL. I run multi-million-dollar application security engagements covering SAST assessments, training and enterprise wide adoption. I've also delivered C/C++ coding standards programs for automotive customers aligned to MISRA 2023, AUTOSAR and ISO 26262.</p>
+                    <p>At Microsoft, I played diverse customer facing roles from Product Support Engineering to Principal Technical Account Manager. In my last role as a Technical Account Manager for advertising partners generating $900M+ in annual ad revenue. I delivered 12+ feature adoption programs that added more than $20M in partner revenue. Before that, I led a $100M+ Azure IoT connected-car program with an 85+ member team, reaching 95+% customer satisfaction and a multi-year contract renewal. My career began with SharePoint architecture support and dev leadership, which gives me a hands-on engineering foundation. Today I use it to connect engineering, product, sales and services teams, turn strategy into execution and earn customers' trust.</p>
+                    <p>I hold PMP, Certified ScrumMaster, ITIL v3, Prosci Change Management, GitHub Foundations and GitHub Copilot certifications, plus Cornell certificates in Cybersecurity and Systems Design.</p>
+                    <p>As Director of Academic Initiatives at Puget Sound PMI, I mentor aspiring project managers and share practical approaches to project management, DevOps, agile delivery and cloud technology.</p>
+                    <div class="social-links">
+                        <a class="text-link" href="Ravi-Kaushal-Prasad-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume (PDF) <span aria-hidden="true">&nearr;</span></a>
+                        <a class="text-link" href="https://www.linkedin.com/in/ravikaushalprasad/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">&nearr;</span></a>
+                        <a class="text-link" href="#work">Explore the work <span aria-hidden="true">&darr;</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section wrap" aria-labelledby="highlights-title">
+            <h2 class="section-label" id="highlights-title"><span>02</span> Highlights</h2>
+            <div class="highlights">
+                <div class="highlight"><h3><em>25+%</em> efficiency</h3><p>Delivered efficiency gains through AI-led program management innovations at GitHub.</p></div>
+                <div class="highlight"><h3><em>$20M+</em> growth</h3><p>Delivered 12+ feature adoption programs with Microsoft engineering teams, driving more than $20M in partner revenue growth.</p></div>
+                <div class="highlight"><h3><em>85+</em> team members</h3><p>Led a global Azure IoT connected-car program with a budget exceeding $100M at Microsoft.</p></div>
+            </div>
+        </section>
+
+        <section class="section wrap" id="work" aria-labelledby="work-title">
+            <p class="section-label"><span>03</span> Index</p>
+            <h2 class="section-heading" id="work-title">A selection of<br><em>work &amp; ideas.</em></h2>
+            <!-- Each row links to an existing presentation section; edit labels and destinations together. -->
+            <ol class="work-list">
+                <li><a class="work-link" href="slide1.html"><span class="work-number">01</span><span><span class="work-title" id="event-title">Agentic Project Management</span><span class="work-category">Presentation &middot; Agentic AI</span></span><span class="work-arrow" aria-hidden="true">&rarr;</span></a></li>
+                <li><a class="work-link" href="slide4.html"><span class="work-number">02</span><span><span class="work-title">AI fundamentals</span><span class="work-category">Foundations &middot; Exploration</span></span><span class="work-arrow" aria-hidden="true">&rarr;</span></a></li>
+                <li><a class="work-link" href="slide6.html"><span class="work-number">03</span><span><span class="work-title">Responsible AI</span><span class="work-category">Principles &middot; Practice</span></span><span class="work-arrow" aria-hidden="true">&rarr;</span></a></li>
+                <li><a class="work-link" href="slide14.html"><span class="work-number">04</span><span><span class="work-title">From ideas to use cases</span><span class="work-category">Applications &middot; Impact</span></span><span class="work-arrow" aria-hidden="true">&rarr;</span></a></li>
+            </ol>
+        </section>
+
+        <section class="section contact wrap" id="contact" aria-labelledby="contact-title">
+            <p class="section-label"><span>04</span> Contact</p>
+            <div class="contact-grid">
+                <h2 class="section-heading" id="contact-title">Let's talk<br><em>technology &amp; impact.</em></h2>
+                <div class="contact-details">
+                    <p>Connect with me to discuss application security, AI-enabled delivery, developer experience, or mentoring the next generation of project leaders.</p>
+                    <div><span class="detail-label">Email</span><a class="text-link" href="mailto:ravi.prasad@live.in">ravi.prasad@live.in <span aria-hidden="true">&nearr;</span></a></div>
+                    <div><span class="detail-label">LinkedIn</span><a class="text-link" href="https://www.linkedin.com/in/ravikaushalprasad/" target="_blank" rel="noopener noreferrer">Connect with Ravi <span aria-hidden="true">&nearr;</span></a></div>
+                    <div><span class="detail-label">GitHub</span><a class="text-link" href="https://github.com/ravikprasad" target="_blank" rel="noopener noreferrer">@ravikprasad <span aria-hidden="true">&nearr;</span></a></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-inner"><span id="presenter-name">Ravi Kaushal Prasad</span><a href="#top">Back to top &uarr;</a></div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const rotation = document.getElementById('hero-rotation');
+            const rotationToggle = document.querySelector('.rotation-toggle');
+            rotationToggle.addEventListener('click', () => {
+                const paused = rotation.classList.toggle('is-paused');
+                rotationToggle.setAttribute('aria-pressed', String(paused));
+                rotationToggle.textContent = paused ? 'Resume animation' : 'Pause animation';
+            });
+
+            const topicStrip = document.querySelector('.topic-strip');
+            const topicTrack = document.getElementById('competencies-track');
+            const topicCopy = topicTrack.querySelector('.topics').cloneNode(true);
+            topicCopy.setAttribute('aria-hidden', 'true');
+            topicTrack.appendChild(topicCopy);
+            topicStrip.classList.add('is-ready');
+            const tickerToggle = document.querySelector('.ticker-toggle');
+            tickerToggle.addEventListener('click', () => {
+                const paused = topicStrip.classList.toggle('is-paused');
+                tickerToggle.setAttribute('aria-pressed', String(paused));
+                tickerToggle.setAttribute('aria-label', paused ? 'Resume competencies' : 'Pause competencies');
+                tickerToggle.textContent = paused ? 'Resume' : 'Pause';
+            });
+
+            const config = window.presentationConfig;
+            if (!config) return;
+
+            if (config.presenter.name) {
+                const presenter = document.createElement('template');
+                presenter.innerHTML = config.presenter.name;
+                const name = presenter.content.textContent.trim();
+                document.getElementById('header-name').textContent = name;
+                document.getElementById('presenter-name').textContent = name;
+                document.getElementById('page-title').textContent = `${name} - Work & Ideas`;
+                document.querySelector('.portrait').alt = name;
+            }
+            if (config.presenter.title && config.presenter.company) {
+                document.getElementById('presenter-title').textContent =
+                    `${config.presenter.title}, ${config.presenter.company}`;
+            }
+            if (config.event.name) {
+                document.getElementById('event-title').textContent = config.event.name;
+            }
+        });
+    </script>
+</body>
+</html>

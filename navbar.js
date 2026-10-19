@@ -5,7 +5,7 @@ function createNavbar() {
     return `
         <div class="navbar navbar-dark">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand" style="cursor: pointer; text-decoration: none;">
+                <a href="homepage.html" class="navbar-brand" style="cursor: pointer; text-decoration: none;">
                     <i class="bi bi-house-door"></i>
                     <span id="navbar-title">Presentation</span>
                 </a>
