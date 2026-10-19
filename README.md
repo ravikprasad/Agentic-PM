@@ -26,7 +26,7 @@ In addition to above four key areas, on-deman demo session could be planned to c
 
 
 ## Quick Start
-1. Open [homepage.html](homepage.html), then select **Start Presentation**
+1. Open [homepage.html](homepage.html), then select **Agentic PM** under Explore
 2. Navigate using arrow keys, spacebar, or swipe gestures on mobile
 3. Edit 'config.js' to customize presentore information
 
@@ -39,7 +39,8 @@ directly to the homepage.
 It uses GitHub's Mona Sans variable font from GitHub's asset CDN, with system
 sans-serif fallbacks, dark surfaces, and a navy-to-purple hero background.
 The introduction, about, highlights, and contact sections contain résumé-based
-copy that can be edited directly in the HTML. Presenter details and the first work
+copy that can be edited directly in the HTML, including the "Now" title. The
+presenter name and the first work
 entry use [config.js](config.js); update work labels and destinations together.
 Homepage styles are self-contained and do not change the presentation slides.
 The final hero line rotates through four phrases every three seconds. Edit the
