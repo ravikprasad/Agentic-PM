@@ -43,12 +43,14 @@ copy that can be edited directly in the HTML. Presenter details and the first wo
 entry use [config.js](config.js); update work labels and destinations together.
 Homepage styles are self-contained and do not change the presentation slides.
 The final hero line rotates through four phrases every three seconds. Edit the
-`hero-phrase` spans and their screen-reader summary together. The animation can
-be paused; reduced-motion preferences show all four phrases without animation.
+`hero-phrase` spans and their screen-reader summary together. Both animations
+pause while hovered with a mouse or focused with the keyboard, and a tap toggles
+pause/resume on touch screens. Reduced-motion preferences show all four phrases
+without animation.
 The core competencies banner above About scrolls continuously in a seamless
 40-second loop. Edit its six list items in the HTML; the second visual copy is
-created automatically. It has its own pause control and becomes a static,
-wrapping list when reduced motion is preferred.
+created automatically. It becomes a static, wrapping list when reduced motion
+is preferred.
 The About section links to [the PDF résumé](Ravi-Kaushal-Prasad-Resume.pdf).
 Replace that file with an updated PDF using the same filename to keep the link current.
 

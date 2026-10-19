@@ -117,19 +117,13 @@
         .hero-phrase:nth-child(2) { animation-delay: -9s; }
         .hero-phrase:nth-child(3) { animation-delay: -6s; }
         .hero-phrase:nth-child(4) { animation-delay: -3s; }
+        /* Pause on hover (mouse), keyboard focus, or tap toggle (touch). */
+        h1:focus .hero-phrase,
         .hero-rotation.is-paused .hero-phrase { animation-play-state: paused; }
-        .rotation-toggle {
-            margin-bottom: 24px;
-            padding: 8px 12px;
-            border: 1px solid var(--line);
-            border-radius: 6px;
-            background: transparent;
-            color: var(--muted);
-            font: 400 14px/1.5 var(--font);
-            cursor: pointer;
+        @media (hover: hover) {
+            .hero-rotation:hover .hero-phrase { animation-play-state: paused; }
         }
-        .rotation-toggle:hover { color: var(--text); }
-        .rotation-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+        h1:focus-visible { outline: 2px solid var(--accent); outline-offset: 8px; }
         @keyframes rotate-phrase {
             0%, 15% { opacity: 1; transform: translateY(0); }
             25% { opacity: 0; transform: translateY(-12px); }
@@ -153,8 +147,12 @@
         .topic-window { flex: 1; min-width: 0; overflow: hidden; }
         .topic-track { display: flex; width: max-content; min-width: 200%; }
         .topic-strip.is-ready .topic-track { animation: roll-competencies 40s linear infinite; }
+        .topic-strip:focus .topic-track,
         .topic-strip.is-paused .topic-track { animation-play-state: paused; }
-        .ticker-toggle { flex-shrink: 0; min-width: 84px; margin: 0 16px; }
+        @media (hover: hover) {
+            .topic-strip:hover .topic-track { animation-play-state: paused; }
+        }
+        .topic-strip:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
         .topics {
             display: flex;
             flex: 1 0 auto;
@@ -252,7 +250,6 @@
             *, *::before, *::after { transition: none !important; }
             .hero-phrase { animation: none; grid-area: auto; }
             .hero-rotation { gap: .4em; }
-            .rotation-toggle { display: none; }
             .topic-strip { display: block; }
             .topic-strip.is-ready .topic-track { animation: none; }
             .topic-track { width: auto; min-width: 0; }
@@ -279,7 +276,7 @@
     <main>
         <section class="hero" aria-labelledby="hero-title">
             <div class="wrap">
-                <h1 id="hero-title">
+                <h1 id="hero-title" tabindex="0">
                     <span>Technical Program Leader</span>
                     <span>delivering impact in</span>
                     <span class="visually-hidden">Human-centered technology; innovative application security &amp; AI-enabled products &amp; services; multi-million initiatives from discovery &amp; strategy; complex global technical cross-group engagements.</span>
@@ -290,7 +287,6 @@
                         <span class="hero-phrase">complex global technical cross-group engagements</span>
                     </span>
                 </h1>
-                <button class="rotation-toggle" type="button" aria-controls="hero-rotation" aria-pressed="false">Pause animation</button>
                 <div class="hero-base">
                     <p class="intro">I bring over two decades of experience turning complex technology initiatives into customer value, from application security and developer platforms to AI-enabled products and services.</p>
                     <dl class="details">
@@ -302,7 +298,7 @@
             </div>
         </section>
 
-        <section class="topic-strip" aria-label="Core competencies">
+        <section class="topic-strip" aria-label="Core competencies" tabindex="0">
             <div class="topic-window">
                 <div class="topic-track" id="competencies-track">
                     <ul class="topics">
@@ -315,7 +311,6 @@
                     </ul>
                 </div>
             </div>
-            <button class="rotation-toggle ticker-toggle" type="button" aria-label="Pause competencies" aria-controls="competencies-track" aria-pressed="false">Pause</button>
         </section>
 
         <section class="section wrap" id="about" aria-labelledby="about-title">
@@ -388,27 +383,20 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const rotation = document.getElementById('hero-rotation');
-            const rotationToggle = document.querySelector('.rotation-toggle');
-            rotationToggle.addEventListener('click', () => {
-                const paused = rotation.classList.toggle('is-paused');
-                rotationToggle.setAttribute('aria-pressed', String(paused));
-                rotationToggle.textContent = paused ? 'Resume animation' : 'Pause animation';
-            });
-
             const topicStrip = document.querySelector('.topic-strip');
             const topicTrack = document.getElementById('competencies-track');
             const topicCopy = topicTrack.querySelector('.topics').cloneNode(true);
             topicCopy.setAttribute('aria-hidden', 'true');
             topicTrack.appendChild(topicCopy);
             topicStrip.classList.add('is-ready');
-            const tickerToggle = document.querySelector('.ticker-toggle');
-            tickerToggle.addEventListener('click', () => {
-                const paused = topicStrip.classList.toggle('is-paused');
-                tickerToggle.setAttribute('aria-pressed', String(paused));
-                tickerToggle.setAttribute('aria-label', paused ? 'Resume competencies' : 'Pause competencies');
-                tickerToggle.textContent = paused ? 'Resume' : 'Pause';
-            });
+
+            const pauseOnTap = (area) => {
+                area.addEventListener('pointerup', (event) => {
+                    if (event.pointerType === 'touch') area.classList.toggle('is-paused');
+                });
+            };
+            pauseOnTap(document.getElementById('hero-rotation'));
+            pauseOnTap(topicStrip);
 
             const config = window.presentationConfig;
             if (!config) return;
