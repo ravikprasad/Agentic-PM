@@ -42,7 +42,8 @@ The introduction, about, highlights, and contact sections contain résumé-based
 copy that can be edited directly in the HTML, including the "Now" title. The
 presenter name and the first work
 entry use [config.js](config.js); update work labels and destinations together.
-Homepage styles are self-contained and do not change the presentation slides.
+Homepage and blog article styles live in [site.css](site.css); they do not change
+the presentation slides, which use [styles.css](styles.css).
 The final hero line rotates through four phrases every three seconds. Edit the
 `hero-phrase` spans and their screen-reader summary together. Both animations
 pause while hovered with a mouse or focused with the keyboard, and a tap toggles
@@ -54,12 +55,16 @@ created automatically. It becomes a static, wrapping list when reduced motion
 is preferred.
 The About section links to [the PDF résumé](Ravi-Kaushal-Prasad-Resume.pdf).
 Replace that file with an updated PDF using the same filename to keep the link current.
-The Blog section's first post shows its slide deck as 1600×900 JPEG images in
+The Blog section on the homepage shows each post's title, first paragraph and
+slides. The title and "Read the full article" open the full post in a new tab;
+the first post is [blog/pm-certification.html](blog/pm-certification.html).
+Its slide deck is 1600×900 JPEG images in
 [images/blog/pm-certification/](images/blog/pm-certification/), one per slide
 (`slide-01.jpg`, `slide-02.jpg`, …). To update them, export the deck to PDF,
 render each page to a JPEG with the same names, and update each slide's alt
-text in the HTML. The viewer shows one slide at a time with previous/next
-buttons, arrow keys and touch swipe. Without JavaScript, all slides stack.
+text in both the homepage and the article page. [slide-viewer.js](slide-viewer.js)
+shows one slide at a time with previous/next buttons, arrow keys and touch
+swipe. Without JavaScript, all slides stack.
 
 ## What's Included
 
@@ -67,6 +72,9 @@ buttons, arrow keys and touch swipe. Without JavaScript, all slides stack.
 Agentic PM/
 ├── index.html              # Redirect to the main homepage
 ├── homepage.html           # Main landing page
+├── site.css                # Homepage and blog styling
+├── slide-viewer.js         # Blog slide viewer
+├── blog/                   # Blog article pages
 ├── slide1.html            # Slide 1: Agenda
 ├── slide2.html            # Slide 2: Why it matters?
 ├── slide3.html            # Slide 3: Agentic AI by 2030
@@ -245,6 +253,9 @@ Here is an overview of the project files:
 ```
 ├── index.html              # Redirect to the main homepage
 ├── homepage.html           # Main landing page
+├── site.css                # Homepage and blog styling
+├── slide-viewer.js         # Blog slide viewer
+├── blog/                   # Blog article pages
 ├── slide1.html            # Slide 1: Agenda
 ├── slide2.html            # Slide 2: Why it matters?
 ├── slide3.html            # Slide 3: Agentic AI by 2030
