@@ -161,6 +161,7 @@
 
     <footer class="site-footer">
         <div class="wrap footer-inner"><span id="presenter-name">Ravi Kaushal Prasad</span><a href="#top">Back to top &uarr;</a></div>
+        <p class="wrap site-views" id="site-views" hidden><span id="site-views-count"></span> site views</p>
     </footer>
 
     <script>
@@ -179,6 +180,23 @@
             };
             pauseOnTap(document.getElementById('hero-rotation'));
             pauseOnTap(topicStrip);
+
+            // Site views via the free Abacus counter API (https://abacus.jasoncameron.dev).
+            // Count once per browser session, and only read the count when opened locally.
+            const views = document.getElementById('site-views');
+            const viewsCounter = 'https://abacus.jasoncameron.dev/%s/ravikprasad-agentic-pm/site-views';
+            let session = null;
+            try { session = window.sessionStorage; } catch { /* storage blocked; count every load */ }
+            const alreadyCounted = session?.getItem('homepage-viewed') === 'true';
+            const shouldCount = location.protocol !== 'file:' && !alreadyCounted;
+            fetch(viewsCounter.replace('%s', shouldCount ? 'hit' : 'get'))
+                .then((response) => (response.ok ? response.json() : Promise.reject(response.status)))
+                .then(({ value }) => {
+                    if (shouldCount) session?.setItem('homepage-viewed', 'true');
+                    document.getElementById('site-views-count').textContent = Number(value).toLocaleString('en-US');
+                    views.hidden = false;
+                })
+                .catch(() => {});
 
             const config = window.presentationConfig;
             if (!config) return;

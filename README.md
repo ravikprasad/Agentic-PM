@@ -54,6 +54,12 @@ The core competencies banner above About scrolls continuously in a seamless
 created automatically. It becomes a static, wrapping list when reduced motion
 is preferred.
 The About section links to [the PDF résumé](Ravi-Kaushal-Prasad-Resume.pdf).
+The homepage footer shows a site views count from the free
+[Abacus](https://abacus.jasoncameron.dev) counter API
+(counter `ravikprasad-agentic-pm/site-views`). Each browser session counts once;
+opening the file locally only reads the count, and the counter stays hidden if
+the service is unavailable. The service receives visitors' IP addresses with
+each request, and a counter expires after about 168 days without views.
 Replace that file with an updated PDF using the same filename to keep the link current.
 The Blog section on the homepage shows each post's title, first paragraph and
 slides. The title and "Read the full article" open the full post in a new tab;
